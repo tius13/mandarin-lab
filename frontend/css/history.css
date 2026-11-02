@@ -1,0 +1,72 @@
+/* History table */
+.table-panel {
+  overflow: hidden;
+  padding: 0;
+}
+
+#historyPage .table-title {
+  padding: 22px 23px 10px;
+}
+
+#historyPage .table-title h2 {
+  margin: 0;
+  font:
+    800 17px "Manrope",
+    sans-serif;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+#historyPage table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+}
+
+#historyPage th {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  background: #fafbfe;
+  color: #8d98a8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.55px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#historyPage td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #f0f2f6;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+#historyPage tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.score-badge {
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #e8f8f0;
+  color: #168b5d;
+  font-weight: 800;
+}
+
+.wrong-word {
+  color: var(--red);
+}
+
+.empty {
+  padding: 30px;
+  color: var(--muted);
+  text-align: center;
+}
+

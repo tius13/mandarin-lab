@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+backend/model/*.pt
+backend/model/thresholds.json
+backend/model/pinyin2phone.tone.txt
+
+# Environment
+!.env.example
+
+# Dataset besar
+dataset/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+
+# Logs
+*.log

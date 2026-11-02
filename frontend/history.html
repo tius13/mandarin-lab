@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <title>Mandarin Lab — Riwayat Latihan</title>
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/auth.css" />
+    <link rel="stylesheet" href="/static/css/home.css" />
+    <link rel="stylesheet" href="/static/css/layout.css" />
+    <link rel="stylesheet" href="/static/css/practice.css" />
+    <link rel="stylesheet" href="/static/css/home-guide.css" />
+    <link rel="stylesheet" href="/static/css/practice-results.css" />
+    <link rel="stylesheet" href="/static/css/history.css" />
+    <link rel="stylesheet" href="/static/css/profile.css" />
+    <link rel="stylesheet" href="/static/css/shared-ui.css" />
+    <link rel="stylesheet" href="/static/css/auth-mode.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+  </head>
+  <body data-page="history">
+    <div class="app-shell">
+      <header class="topbar">
+        <a
+          class="brand"
+          href="#"
+          id="brandHome"
+          aria-label="Mandarin Lab - Beranda"
+        >
+          <span class="brand-mark" aria-hidden="true">文</span>
+          <span class="brand-text"
+            ><strong>Mandarin Lab</strong
+            ><small>PRONUNCIATION PRACTICE</small></span
+          >
+        </a>
+        <div class="topbar-right">
+          <button
+            id="headerAccount"
+            class="avatar-button hidden"
+            type="button"
+            aria-label="Buka profil"
+          >
+            文
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div
+          id="toast"
+          class="toast hidden"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+        <!-- HISTORY -->
+        <section id="historyPage" class="page">
+          <div class="page-heading-row">
+            <div>
+              <span class="eyebrow">YOUR PROGRESS</span>
+              <h1>Riwayat latihan</h1>
+              <p class="muted">
+                Riwayat berisi ringkasan, bukan rekaman audio.
+              </p>
+            </div>
+            <div class="heading-actions">
+              <button class="btn secondary" id="refreshHistory" type="button">
+                ↻ Muat ulang</button
+              ><button class="btn ghost" data-goto="home" type="button">
+                Kembali
+              </button>
+            </div>
+          </div>
+          <div class="panel table-panel">
+            <div class="table-title">
+              <div><h2>Riwayat Pelatihan</h2></div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tanggal</th>
+                    <th>Skor</th>
+                    <th>Total Pelafalan Salah</th>
+                    <th>Total Pelafalan Benar</th>
+                  </tr>
+                </thead>
+                <tbody id="historyRows">
+                  <tr>
+                    <td colspan="4" class="empty">
+                      Belum ada riwayat latihan.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <footer class="app-footer">
+          Mandarin Lab <span>•</span> Latihan konsisten, pelafalan lebih percaya
+          diri.
+        </footer>
+      </main>
+    </div>
+    <script type="module" src="/static/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <title>Mandarin Lab — Latihan Pelafalan</title>
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/auth.css" />
+    <link rel="stylesheet" href="/static/css/home.css" />
+    <link rel="stylesheet" href="/static/css/layout.css" />
+    <link rel="stylesheet" href="/static/css/practice.css" />
+    <link rel="stylesheet" href="/static/css/home-guide.css" />
+    <link rel="stylesheet" href="/static/css/practice-results.css" />
+    <link rel="stylesheet" href="/static/css/history.css" />
+    <link rel="stylesheet" href="/static/css/profile.css" />
+    <link rel="stylesheet" href="/static/css/shared-ui.css" />
+    <link rel="stylesheet" href="/static/css/auth-mode.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+  </head>
+  <body data-page="practice">
+    <div class="app-shell">
+      <header class="topbar">
+        <a
+          class="brand"
+          href="#"
+          id="brandHome"
+          aria-label="Mandarin Lab - Beranda"
+        >
+          <span class="brand-mark" aria-hidden="true">文</span>
+          <span class="brand-text"
+            ><strong>Mandarin Lab</strong
+            ><small>PRONUNCIATION PRACTICE</small></span
+          >
+        </a>
+        <div class="topbar-right">
+          <button
+            id="headerAccount"
+            class="avatar-button hidden"
+            type="button"
+            aria-label="Buka profil"
+          >
+            文
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div
+          id="toast"
+          class="toast hidden"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+        <!-- PRACTICE -->
+        <section id="practicePage" class="page">
+          <div class="page-heading-row practice-page-heading">
+            <div class="practice-page-title">
+              <span class="eyebrow">SPEAKING PRACTICE</span>
+              <h1>Latihan pelafalan</h1>
+              <p class="muted">
+                Dengarkan contoh, ucapkan kata target, lalu tinjau hasilnya.
+              </p>
+            </div>
+            <div class="practice-header-actions">
+              <button
+                id="finishPracticeBtn"
+                class="btn primary"
+                type="button"
+                disabled
+                title="Aktif setelah 1 tes selesai"
+              >
+                Selesaikan Tes
+              </button>
+              <button class="btn ghost" data-goto="home" type="button">
+                ← Beranda
+              </button>
+            </div>
+          </div>
+
+          <div class="practice-section-head">
+            <div>
+              <span class="eyebrow">LANGKAH 1</span>
+              <h2>Pilih level latihan</h2>
+            </div>
+            <p class="muted">Satu sesi terdiri dari 10 tes pelafalan.</p>
+          </div>
+          <div
+            class="level-picker"
+            id="levelPicker"
+            aria-label="Pilih level latihan"
+          >
+            <button class="level-option selected" data-level="1" type="button">
+              <span>01</span><strong>Level 1</strong><small>Pemula</small>
+            </button>
+            <button class="level-option" data-level="2" type="button">
+              <span>02</span><strong>Level 2</strong><small>Menengah</small>
+            </button>
+            <button class="level-option" data-level="3" type="button">
+              <span>03</span><strong>Level 3</strong><small>Lanjutan</small>
+            </button>
+          </div>
+
+          <div class="practice-layout">
+            <section class="panel practice-panel">
+              <div class="practice-topline">
+                <div class="practice-target-label">
+                  <span class="pill">LANGKAH 2 · TARGET PELAFALAN</span>
+                  <p class="muted">
+                    Perhatikan Hanzi dan Pinyin sebelum mulai merekam.
+                  </p>
+                </div>
+                <div class="practice-counters">
+                  <span id="wordCounter" class="muted">Memuat kata…</span>
+                  <span id="testProgress" class="test-progress"
+                    >Tes 0 dari 10</span
+                  >
+                </div>
+              </div>
+              <div
+                class="test-progress-track"
+                role="progressbar"
+                aria-label="Progres tes"
+                aria-valuemin="0"
+                aria-valuemax="10"
+                aria-valuenow="0"
+              >
+                <span id="testProgressBar"></span>
+              </div>
+              <div id="wordDisplay" class="word-display" aria-live="polite">
+                <span class="hanzi">你好</span><span class="pinyin">nǐ hǎo</span
+                ><span class="meaning"
+                  >Dengarkan contoh, lalu ucapkan kata target.</span
+                >
+              </div>
+              <div class="word-navigation">
+                <button id="prevWord" class="btn ghost" type="button">
+                  ← Sebelumnya
+                </button>
+                <button id="nextWord" class="btn ghost" type="button">
+                  Berikutnya →
+                </button>
+              </div>
+              <div class="thin-divider"></div>
+              <div class="audio-controls">
+                <button
+                  id="listenBtn"
+                  class="audio-action listen-action"
+                  type="button"
+                >
+                  <span class="round-icon" aria-hidden="true">🔊</span
+                  ><span
+                    ><strong>Dengarkan Contoh</strong
+                    ><small>Dengarkan pelafalan Mandarin</small></span
+                  >
+                </button>
+                <button
+                  id="recordBtn"
+                  class="audio-action record-action"
+                  type="button"
+                >
+                  <span class="round-icon" aria-hidden="true">🎙</span
+                  ><span
+                    ><strong>Mulai Merekam</strong
+                    ><small>Ucapkan kata di layar</small></span
+                  >
+                </button>
+                <button
+                  id="stopBtn"
+                  class="audio-action stop-action hidden"
+                  type="button"
+                >
+                  <span class="round-icon" aria-hidden="true">■</span
+                  ><span
+                    ><strong>Berhenti Merekam</strong
+                    ><small>Selesaikan tes ini</small></span
+                  >
+                </button>
+</div>
+<audio
+                id="sampleAudio"
+                class="sample-audio hidden"
+                controls
+              ></audio>
+            </section>
+          </div>
+
+          <section
+            id="evalUnavailablePanel"
+            class="panel result-panel hidden"
+            aria-live="polite"
+          >
+            <div class="result-top">
+              <div>
+                <span class="eyebrow">SESI SELESAI</span>
+                <h2>Ringkasan 10 tes</h2>
+                <p class="muted result-subtitle">
+                  Tinjau hasil sebelum kembali ke riwayat latihan.
+                </p>
+              </div>
+              <div class="score-circle">
+                <strong id="resultScore">—</strong><span>/100</span>
+              </div>
+            </div>
+            <div class="result-summary-stats">
+              <div>
+                <small>Pelafalan tepat</small
+                ><strong id="resultCorrect">0</strong>
+              </div>
+              <div>
+                <small>Pelafalan salah</small
+                ><strong id="resultIncorrect">0</strong>
+              </div>
+              <div>
+                <small>Belum dinilai</small
+                ><strong id="resultPending">0</strong>
+              </div>
+            </div>
+            <p id="resultNotice" class="muted">
+              Selesaikan 10 tes untuk melihat hasil.
+            </p>
+            <div class="result-detail-heading">
+              <h3>Rincian pelafalan</h3>
+              <span class="muted">Hijau = cocok · Merah = tidak cocok</span>
+            </div>
+            <div id="detailsList" class="details-list"></div>
+            <div class="result-actions">
+              <button id="finishBtn" class="btn primary" type="button">
+                Selesai · Buka Riwayat →
+              </button>
+              <button id="repeatBtn" class="btn ghost" type="button">
+                Ulangi 10 Tes
+              </button>
+            </div>
+          </section>
+        </section>
+
+        <footer class="app-footer">
+          Mandarin Lab <span>•</span> Latihan konsisten, pelafalan lebih percaya
+          diri.
+        </footer>
+      </main>
+    </div>
+    <script type="module" src="/static/js/app.js"></script>
+  </body>
+</html>

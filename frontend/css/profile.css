@@ -1,0 +1,92 @@
+/* Profile and password settings */
+.profile-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+  gap: 17px;
+  max-width: 1000px;
+}
+
+.profile-summary {
+  padding: 27px 20px;
+  text-align: center;
+}
+
+.profile-avatar {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 15px;
+  border-radius: 22px;
+  background: #e9efff;
+  color: var(--blue);
+  font: 35px serif;
+}
+
+.profile-summary h2 {
+  margin: 0 0 7px;
+  font-size: 20px;
+}
+
+.profile-summary p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.profile-tip {
+  margin-top: 24px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f7f8ff;
+  color: #7a86a1;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.profile-summary .btn {
+  margin-top: 18px;
+}
+
+.profile-form h2,
+.password-change-panel h2 {
+  margin: 0 0 17px;
+  font:
+    800 18px "Manrope",
+    sans-serif;
+}
+
+.profile-form input:disabled {
+  background: #f8f9fc;
+  color: #768195;
+  opacity: 1;
+}
+
+.password-change-panel {
+  width: 100%;
+  max-width: 1000px;
+  margin: 18px auto 0;
+  padding: clamp(19px, 2.5vw, 26px);
+}
+
+.password-panel-copy {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.password-change-panel form {
+  max-width: 600px;
+}
+
+.password-change-panel .btn {
+  margin-top: 19px;
+}
+
+.profile-forgot-line {
+  margin-top: 18px;
+  text-align: left;
+}
+

@@ -1,0 +1,371 @@
+/* Practice */
+#practicePage .practice-page-heading {
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#practicePage .practice-page-title h1 {
+  margin: 8px 0;
+  font-size: clamp(27px, 3vw, 34px);
+  letter-spacing: -0.045em;
+}
+
+#practicePage .practice-page-title p {
+  max-width: 620px;
+  font-size: 13px;
+}
+
+#practicePage .practice-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+#practicePage #finishPracticeBtn {
+  min-height: 44px;
+  white-space: nowrap;
+}
+
+#practicePage #finishPracticeBtn.is-ready {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.practice-section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 0 0 13px;
+}
+
+.practice-section-head h2 {
+  margin: 6px 0 0;
+  font-size: 18px;
+}
+
+.practice-section-head > p {
+  margin: 0 0 2px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+#practicePage .level-picker {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+#practicePage .level-option {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  column-gap: 10px;
+  align-items: center;
+  min-width: 0;
+  min-height: 78px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.16s ease,
+    background 0.16s ease,
+    transform 0.16s ease;
+}
+
+#practicePage .level-option:hover {
+  transform: translateY(-1px);
+  border-color: #c2ceff;
+}
+
+#practicePage .level-option > span {
+  grid-row: span 2;
+  color: #aab4c4;
+  font:
+    800 22px "Manrope",
+    sans-serif;
+}
+
+#practicePage .level-option strong {
+  font:
+    800 13px "Manrope",
+    sans-serif;
+}
+
+#practicePage .level-option small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+#practicePage .level-option.selected {
+  border-color: #8ea6ff;
+  background: linear-gradient(135deg, #f5f7ff, #fff);
+  box-shadow: 0 5px 18px rgba(55, 102, 232, 0.05);
+}
+
+#practicePage .level-option.selected > span {
+  color: var(--blue);
+}
+
+#practicePage .practice-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+#practicePage .practice-panel {
+  min-width: 0;
+  padding: clamp(18px, 3vw, 30px);
+  border-radius: 18px;
+}
+
+#practicePage .practice-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--line);
+}
+
+.practice-target-label {
+  min-width: 0;
+}
+
+.practice-target-label .pill,
+.pill {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #edf2ff;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.practice-target-label > p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+#practicePage .practice-counters {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 9px;
+  text-align: right;
+  font-size: 11px;
+}
+
+#practicePage .practice-counters #wordCounter {
+  padding-top: 7px;
+}
+
+#practicePage .test-progress {
+  min-width: 94px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: #edf2ff;
+  color: #315de0;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.test-progress-track {
+  height: 6px;
+  overflow: hidden;
+  margin: 16px 0 0;
+  border-radius: 999px;
+  background: #edf0f5;
+}
+
+.test-progress-track > span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #3766e8, #7f9cff);
+  transition: width 0.25s ease;
+}
+
+#practicePage .word-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(215px, 26vw, 275px);
+  margin: 5px auto 0;
+  padding: 24px 12px;
+  border-radius: 14px;
+  background: radial-gradient(ellipse at top, #f8faff 0%, #fff 70%);
+  text-align: center;
+}
+
+#practicePage .word-display .hanzi {
+  color: #334155 !important;
+  font: 500 clamp(62px, 7vw, 82px)/1.25 serif;
+  letter-spacing: 2px;
+}
+
+#practicePage .word-display .pinyin {
+  margin-top: 13px;
+  color: #334155 !important;
+  font:
+    700 clamp(22px, 2.8vw, 29px)/1.45 "Manrope",
+    sans-serif;
+}
+
+#practicePage .word-display .meaning {
+  max-width: 100%;
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+#practicePage .word-navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+#practicePage .word-navigation .btn {
+  min-height: 38px;
+  font-size: 12px;
+}
+
+.thin-divider {
+  height: 1px;
+  margin: 22px 0;
+  background: var(--line);
+}
+
+#practicePage .audio-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+}
+
+#practicePage .audio-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  min-height: 74px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.16s ease,
+    background 0.16s ease;
+}
+
+#practicePage .audio-action:hover {
+  border-color: #b9c8ff;
+  background: #f9faff;
+}
+
+#practicePage .audio-action strong,
+#practicePage .audio-action small {
+  display: block;
+}
+
+#practicePage .audio-action strong {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+#practicePage .audio-action small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+#practicePage .round-icon {
+  display: grid;
+  flex: 0 0 38px;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: #edf2ff;
+  color: var(--blue);
+}
+
+#practicePage .record-action {
+  border-color: #cdeedd;
+  background: linear-gradient(135deg, #fff, #f7fdf9);
+}
+
+#practicePage .record-action .round-icon {
+  background: #e6f8ef;
+  color: #159b64;
+}
+
+#practicePage .stop-action {
+  border-color: #f2d1d5;
+  background: linear-gradient(135deg, #fff, #fff8f8);
+}
+
+#practicePage .stop-action .round-icon {
+  background: #fff0f1;
+  color: var(--red);
+}
+
+.sample-audio {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+}
+
+.record-state {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.record-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #25b77c;
+}
+
+.record-state.recording {
+  color: #c73e4e;
+}
+
+.record-state.recording .record-dot {
+  background: #e04e5d;
+  box-shadow: 0 0 0 4px #ffe6e8;
+  animation: ml-pulse 1s infinite;
+}
+
+@keyframes ml-pulse {
+  50% {
+    box-shadow: 0 0 0 7px #ffe6e8;
+  }
+}
+

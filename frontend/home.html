@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <title>Mandarin Lab — Beranda</title>
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/auth.css" />
+    <link rel="stylesheet" href="/static/css/home.css" />
+    <link rel="stylesheet" href="/static/css/layout.css" />
+    <link rel="stylesheet" href="/static/css/practice.css" />
+    <link rel="stylesheet" href="/static/css/home-guide.css" />
+    <link rel="stylesheet" href="/static/css/practice-results.css" />
+    <link rel="stylesheet" href="/static/css/history.css" />
+    <link rel="stylesheet" href="/static/css/profile.css" />
+    <link rel="stylesheet" href="/static/css/shared-ui.css" />
+    <link rel="stylesheet" href="/static/css/auth-mode.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+  </head>
+  <body data-page="home">
+    <div class="app-shell">
+      <header class="topbar">
+        <a
+          class="brand"
+          href="#"
+          id="brandHome"
+          aria-label="Mandarin Lab - Beranda"
+        >
+          <span class="brand-mark" aria-hidden="true">文</span>
+          <span class="brand-text"
+            ><strong>Mandarin Lab</strong
+            ><small>PRONUNCIATION PRACTICE</small></span
+          >
+        </a>
+        <div class="topbar-right">
+          <button
+            id="headerAccount"
+            class="avatar-button hidden"
+            type="button"
+            aria-label="Buka profil"
+          >
+            文
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div
+          id="toast"
+          class="toast hidden"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+        <!-- HOME -->
+        <section id="homePage" class="page">
+          <div class="home-hero panel">
+            <div class="home-avatar" aria-hidden="true">文</div>
+            <div class="hero-copy">
+              <span class="eyebrow">YOUR LEARNING JOURNEY</span>
+              <h1 id="welcomeTitle">Selamat Datang dan Selamat Belajar</h1>
+              <p>
+                Latih pelafalan, kenali pinyin dan nada Mandarin, lalu tinjau
+                progres belajarmu.
+              </p>
+            </div>
+          </div>
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">MENU UTAMA</span>
+              <h2>Pilih aktivitas</h2>
+            </div>
+            <span class="muted">Belajar selangkah demi selangkah</span>
+          </div>
+          <div class="menu-grid">
+            <button
+              class="menu-card menu-card-primary"
+              data-goto="practice"
+              type="button"
+            >
+              <span class="menu-icon">◉</span
+              ><span class="menu-overline">PRACTICE</span
+              ><strong>Mulai Latihan</strong
+              ><span class="menu-description"
+                >Pilih Level 1–3 dan latih pelafalan kata.</span
+              ><span class="menu-link">Mulai sekarang ↗</span>
+            </button>
+            <button class="menu-card" data-goto="history" type="button">
+              <span class="menu-icon icon-lilac">◷</span
+              ><span class="menu-overline">YOUR RECORD</span
+              ><strong>Riwayat</strong
+              ><span class="menu-description"
+                >Lihat skor dan ringkasan sesi sebelumnya.</span
+              ><span class="menu-link">Lihat riwayat ↗</span>
+            </button>
+            <button class="menu-card" data-goto="profile" type="button">
+              <span class="menu-icon icon-gold">♙</span
+              ><span class="menu-overline">YOUR ACCOUNT</span
+              ><strong>Profil</strong
+              ><span class="menu-description"
+                >Lihat data akun dan pengaturan profil.</span
+              ><span class="menu-link">Buka profil ↗</span>
+            </button>
+          </div>
+          <div class="section-heading stats-heading">
+            <div>
+              <span class="eyebrow"></span>
+              <h2>Ringkasan latihan</h2>
+            </div>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-symbol">◷</span><small>Total sesi</small
+              ><strong id="statSessions">0</strong
+              ><span class="stat-note">Sesi latihan tersimpan</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-symbol stat-green">✓</span
+              ><small>Pelafalan tepat</small><strong id="statCorrect">0</strong
+              ><span class="stat-note">Dari sesi yang tersimpan</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-symbol stat-lilac">↗</span
+              ><small>Skor terbaik</small><strong id="statBest">—</strong
+              ><span class="stat-note">Terus tingkatkan!</span>
+            </div>
+          </div>
+
+          <section class="panel practice-guide home-practice-guide">
+            <span class="eyebrow">PANDUAN LATIHAN</span>
+            <h2>Latih dengan fokus</h2>
+            <div class="guide-grid">
+              <div class="guide-item">
+                <span>01</span>
+                <div>
+                  <strong>Dengarkan</strong>
+                  <p>Perhatikan bunyi vokal, konsonan, dan nada.</p>
+                </div>
+              </div>
+              <div class="guide-item">
+                <span>02</span>
+                <div>
+                  <strong>Rekam suara</strong>
+                  <p>Ucapkan target dengan jelas di tempat tenang.</p>
+                </div>
+              </div>
+              <div class="guide-item">
+                <span>03</span>
+                <div>
+                  <strong>Tinjau hasil</strong>
+                  <p>Setelah 10 tes selesai, periksa ringkasan hasil.</p>
+                </div>
+              </div>
+            </div>
+            <div class="notice">
+              <strong>Catatan penilaian</strong>
+              <p>
+                Warna hijau dan merah hanya muncul pada rincian hasil setelah
+                setiap tes direkam dan diproses. Hasil ini adalah perkiraan
+                pencocokan transkripsi browser, bukan pengukuran akustik
+                GOP/GOT.
+              </p>
+            </div>
+          </section>
+        </section>
+
+        <footer class="app-footer">
+          Mandarin Lab <span>•</span> Latihan konsisten, pelafalan lebih percaya
+          diri.
+        </footer>
+      </main>
+    </div>
+    <script type="module" src="/static/js/app.js"></script>
+  </body>
+</html>

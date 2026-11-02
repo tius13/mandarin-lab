@@ -1,0 +1,31 @@
+/* Full-screen authentication mode */
+body.auth-mode .topbar,
+body.auth-mode .app-footer {
+  display: none;
+}
+
+body.auth-mode .main-content {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 0;
+}
+
+body.auth-mode .auth-layout {
+  min-height: 100vh;
+  min-height: 100dvh;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.auth-mode #toast {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  width: min(560px, calc(100vw - 24px));
+  margin: 0;
+  transform: translateX(-50%);
+}
+

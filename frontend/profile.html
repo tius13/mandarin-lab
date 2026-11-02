@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <title>Mandarin Lab — Profil Pengguna</title>
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/auth.css" />
+    <link rel="stylesheet" href="/static/css/home.css" />
+    <link rel="stylesheet" href="/static/css/layout.css" />
+    <link rel="stylesheet" href="/static/css/practice.css" />
+    <link rel="stylesheet" href="/static/css/home-guide.css" />
+    <link rel="stylesheet" href="/static/css/practice-results.css" />
+    <link rel="stylesheet" href="/static/css/history.css" />
+    <link rel="stylesheet" href="/static/css/profile.css" />
+    <link rel="stylesheet" href="/static/css/shared-ui.css" />
+    <link rel="stylesheet" href="/static/css/auth-mode.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+  </head>
+  <body data-page="profile">
+    <div class="app-shell">
+      <header class="topbar">
+        <a
+          class="brand"
+          href="#"
+          id="brandHome"
+          aria-label="Mandarin Lab - Beranda"
+        >
+          <span class="brand-mark" aria-hidden="true">文</span>
+          <span class="brand-text"
+            ><strong>Mandarin Lab</strong
+            ><small>PRONUNCIATION PRACTICE</small></span
+          >
+        </a>
+        <div class="topbar-right">
+          <button
+            id="headerAccount"
+            class="avatar-button hidden"
+            type="button"
+            aria-label="Buka profil"
+          >
+            文
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div
+          id="toast"
+          class="toast hidden"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+        <!-- PROFILE -->
+        <section id="profilePage" class="page">
+          <div class="page-heading-row">
+            <div>
+              <span class="eyebrow">ACCOUNT SETTINGS</span>
+              <h1>Profil pengguna</h1>
+              <p class="muted">Kelola informasi akunmu.</p>
+            </div>
+            <button class="btn ghost" data-goto="home" type="button">
+              ← Kembali
+            </button>
+          </div>
+          <div class="profile-layout">
+            <aside class="panel profile-summary">
+              <div class="profile-avatar">文</div>
+              <h2 id="profileName">Pengguna</h2>
+              <p id="profileEmail">email@example.com</p>
+              <span class="pill">MEMBER</span>
+              <div class="profile-tip">
+                Konsistensi kecil setiap hari membawa kemajuan besar.
+              </div>
+              <button
+                id="logoutBtn"
+                class="btn danger-outline full"
+                type="button"
+              >
+                Logout
+              </button>
+            </aside>
+            <div class="panel profile-form" id="profileInfoPanel">
+              <h2>Informasi akun</h2>
+              <label for="profileIdInput">ID Pengguna</label
+              ><input id="profileIdInput" type="text" disabled readonly />
+              <form id="updateEmailForm" novalidate>
+                <label for="profileEmailInput">Email</label>
+                <input
+                  id="profileEmailInput"
+                  name="email"
+                  type="email"
+                  maxlength="255"
+                  required
+                  autocomplete="email"
+                  placeholder="nama@email.com"
+                />
+                <button class="btn primary" type="submit">Simpan Email →</button>
+              </form>
+              <label for="profileCreatedInput">Tanggal dibuat</label
+              ><input id="profileCreatedInput" type="text" disabled readonly />
+            </div>
+          </div>
+          <section class="panel profile-form password-change-panel">
+            <h2>Ubah Password</h2>
+            <p class="muted password-panel-copy">
+              Masukkan password saat ini dan password baru. Jika lupa password,
+              gunakan tautan reset di halaman masuk.
+            </p>
+            <form id="changePasswordForm" novalidate>
+              <label for="currentPasswordInput">Password saat ini</label>
+              <input
+                id="currentPasswordInput"
+                name="current_password"
+                type="password"
+                required
+                autocomplete="current-password"
+                placeholder="Masukkan password saat ini"
+              />
+              <label for="newPasswordInput">Password baru</label>
+              <input
+                id="newPasswordInput"
+                name="new_password"
+                type="password"
+                required
+                minlength="8"
+                autocomplete="new-password"
+                placeholder="Minimal 8 karakter"
+              />
+              <label for="confirmNewPasswordInput"
+                >Konfirmasi password baru</label
+              >
+              <input
+                id="confirmNewPasswordInput"
+                name="confirm_password"
+                type="password"
+                required
+                minlength="8"
+                autocomplete="new-password"
+                placeholder="Ulangi password baru"
+              />
+              <button class="btn primary" type="submit">Ubah Password →</button>
+            </form>
+            <p class="auth-switch profile-forgot-line">
+              Lupa password? Gunakan
+              <button
+                id="profileForgotPassword"
+                class="text-button"
+                type="button"
+              >
+                Ubah Password
+              </button>
+              untuk mencocokkan email akun dan mengatur password baru.
+            </p>
+          </section>
+        </section>
+
+        <footer class="app-footer">
+          Mandarin Lab <span>•</span> Latihan konsisten, pelafalan lebih percaya
+          diri.
+        </footer>
+      </main>
+    </div>
+    <script type="module" src="/static/js/app.js"></script>
+  </body>
+</html>

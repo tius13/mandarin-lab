@@ -1,0 +1,147 @@
+/* Login and registration */
+.auth-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  align-items: stretch;
+  min-height: min(720px, calc(100dvh - 130px));
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.auth-intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+  padding: clamp(28px, 5vw, 64px);
+  color: #fff;
+  background: linear-gradient(145deg, #243c83, #426be9);
+}
+
+.auth-intro .eyebrow {
+  color: #cedaff;
+}
+
+.auth-intro h1 {
+  max-width: 560px;
+  margin: 15px 0 12px;
+  font-size: clamp(29px, 3.4vw, 42px);
+  letter-spacing: -0.045em;
+  line-height: 1.18;
+}
+
+.auth-intro > p {
+  max-width: 450px;
+  color: #e0e7ff;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.auth-hanzi {
+  position: absolute;
+  right: 7%;
+  bottom: 3%;
+  color: rgba(255, 255, 255, 0.14);
+  font: 300 clamp(110px, 16vw, 205px)/1 serif;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.auth-hanzi span {
+  font-size: 0.6em;
+}
+
+.auth-footnote {
+  position: relative;
+  margin-top: 30px !important;
+  font-weight: 600;
+}
+
+.auth-panel {
+  align-self: center;
+  width: min(100% - 36px, 430px);
+  margin: 28px auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.auth-panel form {
+  width: 100%;
+  max-width: 430px;
+  margin-inline: auto;
+}
+
+.auth-panel label,
+.profile-form label {
+  display: block;
+  margin: 16px 0 7px;
+  color: #566276;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.auth-panel input,
+.profile-form input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 45px;
+  margin-top: 7px;
+  padding: 11px 13px;
+  border: 1px solid #e0e6ef;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  color: var(--ink);
+  font-size: 13px;
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.auth-panel input:focus,
+.profile-form input:focus {
+  border-color: #8da4ff;
+  box-shadow: 0 0 0 3px rgba(55, 102, 232, 0.09);
+}
+
+.auth-panel input::placeholder,
+.profile-form input::placeholder {
+  color: #a1aaba;
+}
+
+.auth-panel .form-title {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font:
+    800 21px/1.3 "Manrope",
+    sans-serif;
+}
+
+.auth-panel .form-note,
+.form-note {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.auth-switch {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.forgot-line {
+  margin-top: 8px;
+}
+

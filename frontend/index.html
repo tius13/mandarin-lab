@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <title>Mandarin Lab — Evaluasi Pelafalan</title>
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/auth.css" />
+    <link rel="stylesheet" href="/static/css/home.css" />
+    <link rel="stylesheet" href="/static/css/layout.css" />
+    <link rel="stylesheet" href="/static/css/practice.css" />
+    <link rel="stylesheet" href="/static/css/home-guide.css" />
+    <link rel="stylesheet" href="/static/css/practice-results.css" />
+    <link rel="stylesheet" href="/static/css/history.css" />
+    <link rel="stylesheet" href="/static/css/profile.css" />
+    <link rel="stylesheet" href="/static/css/shared-ui.css" />
+    <link rel="stylesheet" href="/static/css/auth-mode.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+  </head>
+  <body data-page="auth">
+    <div class="app-shell">
+      <header class="topbar">
+        <a
+          class="brand"
+          href="#"
+          id="brandHome"
+          aria-label="Mandarin Lab - Beranda"
+        >
+          <span class="brand-mark" aria-hidden="true">文</span>
+          <span class="brand-text"
+            ><strong>Mandarin Lab</strong
+            ><small>PRONUNCIATION PRACTICE</small></span
+          >
+        </a>
+        <div class="topbar-right">
+          <button
+            id="headerAccount"
+            class="avatar-button hidden"
+            type="button"
+            aria-label="Buka profil"
+          >
+            文
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div
+          id="toast"
+          class="toast hidden"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+        <!-- LOGIN / REGISTER -->
+        <section id="authView" class="auth-layout">
+          <div class="auth-intro">
+            <span class="eyebrow">MANDARIN PRONUNCIATION LAB</span>
+            <h1 id="authTitle">Selamat Datang</h1>
+            <p id="authSubtitle">
+              Masuk untuk melanjutkan perjalanan belajar Mandarin-mu.
+            </p>
+            <div class="auth-hanzi" aria-hidden="true">学<span>说</span></div>
+            <p class="auth-footnote">
+              Dengarkan. Ucapkan. Tingkatkan pelafalanmu.
+            </p>
+          </div>
+          <div class="panel auth-panel">
+            <form id="loginForm" novalidate>
+              <label for="loginEmail">Email</label>
+              <input
+                id="loginEmail"
+                name="email"
+                type="email"
+                placeholder="nama@email.com"
+                required
+                autocomplete="email"
+              />
+              <label for="loginPassword">Password</label>
+              <input
+                id="loginPassword"
+                name="password"
+                type="password"
+                placeholder="Masukkan password"
+                required
+                autocomplete="current-password"
+              />
+              <button class="btn primary full" type="submit">
+                <span>Masuk</span><span aria-hidden="true">→</span>
+              </button>
+              <p class="auth-switch">
+                Tidak Memiliki Akun?
+                <button id="showRegister" class="text-button" type="button">
+                  Buat Akun
+                </button>
+              </p>
+              <p class="auth-switch forgot-line">
+                Lupa password? Tekan
+                <button
+                  id="showForgotPassword"
+                  class="text-button"
+                  type="button"
+                >
+                  Ubah Password
+                </button>
+              </p>
+            </form>
+
+            <form id="forgotPasswordForm" class="hidden" novalidate>
+              <h2 class="form-title">Ubah Password</h2>
+              <p class="form-note">
+                Masukkan email yang terdaftar, lalu buat password baru. Tidak
+                ada email yang dikirim. Fitur ini ditujukan untuk penggunaan
+                lokal/demo.
+              </p>
+              <label for="forgotEmail">Email akun</label>
+              <input
+                id="forgotEmail"
+                name="email"
+                type="email"
+                placeholder="nama@email.com"
+                required
+                autocomplete="email"
+              />
+              <label for="forgotNewPassword">Password baru</label>
+              <input
+                id="forgotNewPassword"
+                name="new_password"
+                type="password"
+                placeholder="Minimal 8 karakter"
+                required
+                minlength="8"
+                autocomplete="new-password"
+              />
+              <label for="forgotConfirmPassword"
+                >Konfirmasi password baru</label
+              >
+              <input
+                id="forgotConfirmPassword"
+                name="confirm_password"
+                type="password"
+                placeholder="Ulangi password baru"
+                required
+                minlength="8"
+                autocomplete="new-password"
+              />
+              <button class="btn primary full" type="submit">
+                Simpan Password Baru →
+              </button>
+              <p class="auth-switch">
+                Ingat password?
+                <button id="forgotBackLogin" class="text-button" type="button">
+                  Kembali ke Masuk
+                </button>
+              </p>
+            </form>
+
+            <form id="registerForm" class="hidden" novalidate>
+              <label for="registerNama">Nama Pengguna</label>
+              <input
+                id="registerNama"
+                name="nama"
+                type="text"
+                placeholder="Nama Anda"
+                required
+                autocomplete="name"
+              />
+              <label for="registerEmail">Email</label>
+              <input
+                id="registerEmail"
+                name="email"
+                type="email"
+                placeholder="nama@email.com"
+                required
+                autocomplete="email"
+              />
+              <label for="registerPassword">Password</label>
+              <input
+                id="registerPassword"
+                name="password"
+                type="password"
+                placeholder="Minimal 8 karakter"
+                required
+                minlength="8"
+                autocomplete="new-password"
+              />
+              <label for="registerConfirm">Konfirmasi Password</label>
+              <input
+                id="registerConfirm"
+                name="confirm"
+                type="password"
+                placeholder="Ulangi password"
+                required
+                minlength="8"
+                autocomplete="new-password"
+              />
+              <button class="btn primary full" type="submit">
+                <span>Daftar</span><span aria-hidden="true">→</span>
+              </button>
+              <p class="auth-switch">
+                Sudah memiliki akun?
+                <button id="showLogin" class="text-button" type="button">
+                  Kembali/Masuk
+                </button>
+              </p>
+            </form>
+          </div>
+        </section>
+
+        <footer class="app-footer">
+          Mandarin Lab <span>•</span> Latihan konsisten, pelafalan lebih percaya
+          diri.
+        </footer>
+      </main>
+    </div>
+    <script type="module" src="/static/js/app.js"></script>
+  </body>
+</html>

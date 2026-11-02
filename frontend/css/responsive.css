@@ -1,0 +1,428 @@
+/* Tablet */
+@media (max-width: 900px) {
+  .main-content {
+    padding: 24px 18px;
+  }
+
+  .auth-layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1fr);
+  }
+
+  .auth-intro {
+    padding: 28px;
+  }
+
+  .menu-grid,
+  .stats-grid {
+    gap: 11px;
+  }
+
+  .menu-card {
+    padding: 17px;
+  }
+
+  .profile-layout {
+    grid-template-columns: minmax(190px, 0.7fr) minmax(0, 1.3fr);
+  }
+
+  .home-practice-guide .guide-grid {
+    gap: 8px 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  body {
+    font-size: 14px;
+  }
+
+  .topbar {
+    height: 68px;
+    padding-inline: 13px;
+  }
+
+  .brand-mark {
+    flex-basis: 39px;
+    width: 39px;
+    height: 39px;
+    border-radius: 12px;
+  }
+
+  .brand-text strong {
+    font-size: 14px;
+  }
+
+  .brand-text small {
+    font-size: 7px;
+    letter-spacing: 0.9px;
+  }
+
+  .main-content {
+    padding: 17px 12px 22px;
+  }
+
+  .panel {
+    padding: 18px;
+    border-radius: 15px;
+  }
+
+  .auth-layout {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 100vh;
+    min-height: 100dvh;
+    border-radius: 0;
+  }
+
+  .auth-intro {
+    min-height: 215px;
+    padding: 24px 22px;
+  }
+
+  .auth-intro h1 {
+    font-size: 29px;
+  }
+
+  .auth-intro > p {
+    font-size: 12px;
+  }
+
+  .auth-hanzi {
+    right: 8%;
+    bottom: -4%;
+    font-size: 108px;
+  }
+
+  .auth-footnote {
+    margin-top: 7px !important;
+  }
+
+  .auth-panel {
+    width: calc(100% - 42px);
+    margin: 25px auto 34px;
+  }
+
+  .home-hero {
+    align-items: flex-start;
+    gap: 13px;
+    min-height: auto;
+    padding: 20px 17px;
+    border-radius: 16px;
+  }
+
+  .home-avatar {
+    flex-basis: 51px;
+    width: 51px;
+    height: 51px;
+    border-radius: 15px;
+    font-size: 28px;
+  }
+
+  .hero-copy h1 {
+    font-size: 21px;
+  }
+
+  .hero-copy p,
+  .menu-description {
+    font-size: 12px;
+  }
+
+  .section-heading,
+  .page-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section-heading {
+    margin: 25px 0 14px;
+  }
+
+  .section-heading h2,
+  .page-heading-row h1 {
+    font-size: 22px;
+  }
+
+  .menu-grid,
+  .stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 11px;
+  }
+
+  .menu-card {
+    min-height: 0;
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .menu-link {
+    padding-top: 12px;
+  }
+
+  .stat-card {
+    padding: 17px;
+  }
+
+  #practicePage .practice-page-heading {
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 22px;
+  }
+
+  #practicePage .practice-header-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
+
+  #practicePage .practice-header-actions .btn {
+    width: 100%;
+  }
+
+  .practice-section-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #practicePage .level-picker {
+    gap: 7px;
+  }
+
+  #practicePage .level-option {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 82px;
+    padding: 11px 9px;
+    gap: 3px;
+    border-radius: 11px;
+  }
+
+  #practicePage .level-option > span {
+    grid-row: auto;
+    font-size: 18px;
+  }
+
+  #practicePage .level-option strong {
+    font-size: 11px;
+  }
+
+  #practicePage .level-option small {
+    font-size: 9px;
+  }
+
+  #practicePage .practice-panel {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  #practicePage .practice-topline {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  #practicePage .practice-counters {
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  #practicePage .practice-counters #wordCounter {
+    align-self: center;
+    padding-top: 0;
+  }
+
+  #practicePage .word-display {
+    min-height: 205px;
+    padding: 21px 8px;
+  }
+
+  #practicePage .word-display .hanzi {
+    font-size: 61px;
+  }
+
+  #practicePage .word-display .pinyin {
+    font-size: 23px;
+  }
+
+  #practicePage .word-display .meaning {
+    font-size: 12px;
+  }
+
+  #practicePage .word-navigation {
+    gap: 7px;
+  }
+
+  #practicePage .word-navigation .btn {
+    flex: 1 1 auto;
+  }
+
+  #practicePage .audio-controls {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  #practicePage .audio-action {
+    min-height: 66px;
+    padding: 12px;
+  }
+
+  #practicePage .audio-action strong {
+    font-size: 12px;
+  }
+
+  #practicePage .audio-action small {
+    font-size: 10px;
+  }
+
+  .home-practice-guide .guide-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .result-top {
+    align-items: flex-start;
+  }
+
+  .score-circle {
+    flex-basis: 68px;
+    width: 68px;
+    height: 68px;
+    border-width: 6px;
+  }
+
+  .score-circle strong {
+    font-size: 20px;
+  }
+
+  .result-summary-stats {
+    gap: 6px;
+  }
+
+  .result-summary-stats > div {
+    padding: 10px 8px;
+  }
+
+  .result-summary-stats small {
+    font-size: 9px;
+  }
+
+  .result-summary-stats strong {
+    font-size: 18px;
+  }
+
+  .result-detail-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .detail-row {
+    grid-template-columns: 21px minmax(0, 1fr);
+    gap: 8px;
+    padding: 11px;
+  }
+
+  .status-tag {
+    grid-column: 2;
+    white-space: normal;
+  }
+
+  .result-word {
+    gap: 8px;
+  }
+
+  .detail-hanzi {
+    font-size: 23px;
+  }
+
+  .detail-pinyin {
+    font-size: 13px;
+  }
+
+  #practicePage .result-actions {
+    flex-direction: column;
+  }
+
+  #practicePage .result-actions .btn {
+    width: 100%;
+  }
+
+  #historyPage .table-title {
+    padding: 18px 16px 9px;
+  }
+
+  #historyPage th,
+  #historyPage td {
+    padding: 13px 14px;
+  }
+
+  .heading-actions {
+    width: 100%;
+  }
+
+  .heading-actions .btn {
+    flex: 1 1 auto;
+  }
+
+  .profile-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .profile-summary {
+    padding: 23px 17px;
+  }
+
+  .password-change-panel {
+    padding: 18px;
+  }
+
+  .password-change-panel .btn {
+    width: 100%;
+  }
+
+  .profile-forgot-line {
+    text-align: left;
+  }
+
+  .app-footer {
+    padding-top: 25px;
+    font-size: 10px;
+  }
+}
+
+/* Extra narrow screens */
+@media (max-width: 380px) {
+  .main-content {
+    padding-inline: 9px;
+  }
+
+  .auth-panel {
+    width: calc(100% - 32px);
+  }
+
+  #practicePage .level-option {
+    padding-inline: 7px;
+  }
+
+  #practicePage .level-option strong {
+    font-size: 10px;
+  }
+
+  .result-summary-stats small {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Respect accessibility settings */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
